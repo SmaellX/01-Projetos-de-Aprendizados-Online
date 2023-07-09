@@ -1,2 +1,2 @@
 # 01-Exercicios
- Repositorio para exercicios aprendido em aula.
+ Repositório para exercicios aprendido em aula.
