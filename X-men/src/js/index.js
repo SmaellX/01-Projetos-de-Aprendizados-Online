@@ -24,11 +24,6 @@ personagens.forEach((personagem) => {
     const descricaoPersonagem = document.getElementById ('descricao-personagem');
     descricaoPersonagem.innerText = personagem.getAttribute ('data-description');
 
-  
-
-
-
-
 
   })
 })
