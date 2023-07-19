@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz dia dos Namorados</title>
+
+  <style>
+    body {
+      background-color: rgb(245, 182, 229);
+    }
+
+    .painel {
+      margin: auto;
+      background-color: white;
+      width: 500px;
+      height: 500px;
+      border-radius: 20px;
+      text-align: center;
+      padding-top: 50px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(189, 12, 12);
+    }
+
+
+    #sim {
+      height: 40px;
+      width: 60px;
+      background-color: rgb(211, 31, 115);
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      margin-left: -70px;
+    }
+
+    #nao {
+      position: absolute;
+      height: 40px;
+      width: 60px;
+      background-color: rgb(211, 31, 115);
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="painel">
+    <h1> Feliz dia dos Namorados </h1>
+    <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+    <h2>Aceita namorar comigo?</h2>
+
+   <button id="sim" class="button" onclick="alerta()">Sim</button>
+    <button id="nao" class="button" onmouseover="moverBotao()">Não</button>
+
+  </div>
+  <script>
+    function moverBotao() {
+      var botaoNao = document.getElementById("nao");
+
+      var largurajanela = window.innerWidth;
+      var alturajanela = window.innerHeight;
+
+      var botaoX = botaoNao.offsetWidth;
+      var BotaoY = botaoNao.offsetHeight;
+
+      // var aleatorioX = Math.floor(Math.random()* maxX);
+      // var aleatorioY= Math.floor(Math.random * maxY);
+
+      var aleatorioX = Math.random() * (largurajanela - botaoX);
+      var aleatorioY = Math.random() * (alturajanela - BotaoY);
+
+      botaoNao.style.left = aleatorioX + "px";
+      botaoNao.style.top = aleatorioY + "px";
+    }
+
+    function alerta() {
+      alert("Quem Bom, Te amo! ")
+    }
+
+  </script>
+</body>
+
+</html>
