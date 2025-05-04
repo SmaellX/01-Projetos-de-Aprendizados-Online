@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Votação Escolar - EJA 2025</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+<header>
+    <h1>Votação - EJA 2025</h1>
+    <p>Prof: Morgana Carneiro</p>
+</header>
+<body>
+    <div class="container">
+       
+
+        <div class="tela">
+            <p>Digite o número do candidato:</p>
+
+            <label> <input type="text" id="numero" maxlength="2" autofocus />
+    
+
+            <div class="foto" id="fotoCandidato"></div>
+
+            <div class="painel-numerico">
+                <button onclick="digitarNumero('1')">1</button>
+                <button onclick="digitarNumero('2')">2</button>
+                <button onclick="digitarNumero('3')">3</button>
+                <button onclick="digitarNumero('4')">4</button>
+                <button onclick="digitarNumero('5')">5</button>
+                <button onclick="digitarNumero('6')">6</button>
+                <button onclick="digitarNumero('7')">7</button>
+                <button onclick="digitarNumero('8')">8</button>
+                <button onclick="digitarNumero('9')">9</button>
+                <button onclick="corrigirNumero()" class="corrigir">CORRIGIR</button>
+                <button onclick="digitarNumero('0')">0</button>
+                <button onclick="confirmarVoto()" class="confirmar">CONFIRMAR</button>
+            </div>
+
+            <div class="mensagem" id="mensagem"></div>
+        </div>
+    </div>
+
+    <footer>
+        <button onclick="toggleResultados()">Mostrar/Ocultar Resultados</button>
+
+        <div id="resultados">
+            <h3>Resultados da Votação</h3>
+            <div id="resultadosLista"></div>
+        </div>
+      
+    </footer>
+
+    <audio id="somTecla" src="./src/sounds/numeros.mp3"></audio>
+    <audio id="somConfirma" src="./src/sounds/confirma.mp3"></audio>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
